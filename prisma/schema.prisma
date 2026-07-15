@@ -1,0 +1,25 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  password  String
+  role      String   @default("staff")
+  patients  Patient[]
+  createdAt DateTime @default(now())
+}
+
+model Patient {
+  id        Int      @id @default(autoincrement())
+  name      String
+  diagnosis String
+  ownerId   Int
+  owner     User     @relation(fields: [ownerId], references: [id])
+  createdAt DateTime @default(now())
+}
