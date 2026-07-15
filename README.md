@@ -20,7 +20,7 @@ gunakan sehari-hari (Node.js, Express, PostgreSQL, Prisma).
 ## Vulnerability yang Ditemukan
 
 1. SQL Injection (A03:2021)
-2. Broken Authentication — plaintext password & JWT tanpa expiry (A07:2021)
+2. Broken Authentication plaintext password & JWT tanpa expiry (A07:2021)
 3. Insecure Direct Object Reference / IDOR (A01:2021)
 4. Missing Rate Limiting
 5. Sensitive Data Exposure
